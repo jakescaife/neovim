@@ -8,6 +8,9 @@ return {
 			update_focused_file = {
 				enable = true,
 			},
+			view = {
+				width = 50,
+			},
 		})
 
 		vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", {})
