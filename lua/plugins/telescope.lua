@@ -22,5 +22,5 @@ return {
 			})
 			telescope.load_extension("ui-select")
 		end,
-	}
+	},
 }

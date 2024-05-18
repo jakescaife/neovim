@@ -3,7 +3,7 @@ return {
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup({
-				PATH = "prepend"
+				PATH = "prepend",
 			})
 		end,
 	},
@@ -13,7 +13,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"gopls"
+					"gopls",
 				},
 			})
 		end,
@@ -38,7 +38,7 @@ return {
 			})
 
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-			vim.keymap.set({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action)
+			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action)
 		end,
 	},
 }
