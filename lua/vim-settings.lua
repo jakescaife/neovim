@@ -29,3 +29,10 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.opt.laststatus = 0
+
+vim.diagnostic.config({
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
+})
