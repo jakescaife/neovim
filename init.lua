@@ -1,3 +1,3 @@
-require("custom.vim-settings")
+require("custom.settings")
 require("custom.remaps")
 require("custom.lazy")
