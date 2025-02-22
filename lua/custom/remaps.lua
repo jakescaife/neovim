@@ -10,3 +10,7 @@ vim.keymap.set("n", "grr", vim.lsp.buf.references)
 vim.keymap.set("n", "gri", vim.lsp.buf.implementation)
 vim.keymap.set("n", "g0", vim.lsp.buf.document_symbol)
 vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help)
+
+-- Quickfix list
+vim.keymap.set("n", "]q", "<cmd>cnext<CR>")
+vim.keymap.set("n", "[q", "<cmd>cprev<CR>")
