@@ -13,6 +13,12 @@ end
 
 return {
   {
+    "j-hui/fidget.nvim",
+    config = function()
+      require("fidget").setup()
+    end
+  },
+  {
     "neovim/nvim-lspconfig",
     dependencies = {
       "saghen/blink.cmp",
@@ -33,6 +39,7 @@ return {
         capabilities = capabilities,
         cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose", "--compile-commands-dir=." },
       }
+      require("lspconfig").rust_analyzer.setup { capabilities = capabilities }
       vim.api.nvim_create_autocmd("LspAttach", { callback = lsp_onattach })
     end,
   },
