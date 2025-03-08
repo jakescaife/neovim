@@ -5,7 +5,9 @@ return {
     require "nvim-treesitter.configs".setup {
       auto_install = false,
       ensure_installed = {
-        "lua"
+        "lua",
+        "c",
+        "rust"
       },
       highlight = {
         enable = true,
