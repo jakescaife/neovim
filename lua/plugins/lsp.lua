@@ -34,12 +34,23 @@ return {
     },
     config = function()
       local capabilities = require("blink.cmp").get_lsp_capabilities()
-      require("lspconfig").lua_ls.setup { capabilities = capabilities }
-      require("lspconfig").clangd.setup {
-        capabilities = capabilities,
-        cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose", "--compile-commands-dir=." },
+
+      -- Lua
+      require("lspconfig").lua_ls.setup {
+        capabilities = capabilities
       }
-      require("lspconfig").rust_analyzer.setup { capabilities = capabilities }
+
+      -- Go
+      require("lspconfig").gopls.setup {
+        capabilities = capabilities,
+        settings = {
+          gopls = {
+            analyses = { unusedparams = true },
+            staticcheck = true,
+          },
+        },
+      }
+
       vim.api.nvim_create_autocmd("LspAttach", { callback = lsp_onattach })
     end,
   },

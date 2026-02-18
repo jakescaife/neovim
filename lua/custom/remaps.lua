@@ -12,6 +12,7 @@ vim.keymap.set("n", "grd", vim.lsp.buf.definition)
 vim.keymap.set("n", "grh", vim.lsp.buf.declaration)
 vim.keymap.set("n", "g0", vim.lsp.buf.document_symbol)
 vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help)
+vim.keymap.set("n", "gre", vim.diagnostic.open_float)
 
 -- Quickfix list
 vim.keymap.set("n", "]q", "<cmd>cnext<CR>")

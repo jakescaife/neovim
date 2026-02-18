@@ -6,8 +6,11 @@ return {
       auto_install = false,
       ensure_installed = {
         "lua",
-        "c",
-        "rust"
+        "c_sharp",
+        "html",
+        "css",
+        "go",
+        "dockerfile",
       },
       highlight = {
         enable = true,
